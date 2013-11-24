@@ -12,14 +12,14 @@ my %module_build_args = (
   "configure_requires" => {
     "Module::Build" => "0.4202"
   },
-  "dist_abstract" => "An evolution of POD",
+  "dist_abstract" => "The Specification of the MetaPOD format",
   "dist_author" => [
     "Kent Fredric <kentfredric\@gmail.com>"
   ],
-  "dist_name" => "MetaPOD",
-  "dist_version" => "0.3.0",
+  "dist_name" => "MetaPOD-Spec",
+  "dist_version" => "0.3.5",
   "license" => "perl",
-  "module_name" => "MetaPOD",
+  "module_name" => "MetaPOD::Spec",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
@@ -27,7 +27,7 @@ my %module_build_args = (
     "Data::Dump" => 0,
     "List::AllUtils" => 0,
     "Module::Runtime" => 0,
-    "Moo" => "1.000008",
+    "Moo" => 0,
     "Moo::Role" => 0,
     "Pod::Eventual" => 0,
     "Throwable::Error" => 0,
