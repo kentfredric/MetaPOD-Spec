@@ -1,4 +1,26 @@
-0.3.0
+0.3.5
+ [Changed / develop requires]
+ - Dist::Zilla::PluginBundle::Author::KENTNL 2.004000 → 2.004001
+
+ [Removed / runtime requires]
+ - Carp
+ - Data::Dump
+ - List::AllUtils
+ - Module::Runtime
+ - Moo 1.000008
+ - Moo::Role
+ - Pod::Eventual
+ - Throwable::Error
+ - version 0.77
+
+ [Removed / test requires]
+ - FindBin
+ - Path::Iterator::Rule
+ - Path::Tiny
+ - Test::Fatal
+ - Test::Requires
+
+0.3.0 2013-11-23T06:39:27Z
  [Added / develop requires]
  - Dist::Zilla::Plugin::Author::KENTNL::MinimumPerl
  - Dist::Zilla::Plugin::Authority 1.006

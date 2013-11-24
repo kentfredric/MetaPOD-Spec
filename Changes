@@ -1,6 +1,15 @@
-Release history for MetaPOD
+Release history for MetaPOD-Spec
 
 {{$NEXT}}
+ [00 Fork]
+ - MetaPOD::Spec seperates from MetaPOD at this version.
+ - As does MetaPOD::JSON
+
+ [Dependencies::Stats]
+ - Dependencies changed, see Changes.deps{,.all,.dev} for details
+ - develop: ↑1
+ - runtime: -9
+ - test: -5
 
 0.3.0 2013-11-23T06:39:27Z
  [00 FORK]
