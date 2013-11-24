@@ -38,24 +38,14 @@ my %module_build_args = (
   },
   "script_files" => [],
   "test_requires" => {
-    "FindBin" => 0,
-    "Path::Iterator::Rule" => 0,
-    "Path::Tiny" => 0,
-    "Test::Fatal" => 0,
-    "Test::More" => "1.001002",
-    "Test::Requires" => 0
+    "Test::More" => "1.001002"
   }
 );
 
 
 my %fallback_build_requires = (
-  "FindBin" => 0,
   "Module::Build" => "0.4202",
-  "Path::Iterator::Rule" => 0,
-  "Path::Tiny" => 0,
-  "Test::Fatal" => 0,
-  "Test::More" => "1.001002",
-  "Test::Requires" => 0
+  "Test::More" => "1.001002"
 );
 
 

@@ -50,18 +50,13 @@ sub pmver {
 
 eval { $v .= pmver('Carp','any version') };
 eval { $v .= pmver('Data::Dump','any version') };
-eval { $v .= pmver('FindBin','any version') };
 eval { $v .= pmver('List::AllUtils','any version') };
 eval { $v .= pmver('Module::Build','0.4202') };
 eval { $v .= pmver('Module::Runtime','any version') };
 eval { $v .= pmver('Moo','any version') };
 eval { $v .= pmver('Moo::Role','any version') };
-eval { $v .= pmver('Path::Iterator::Rule','any version') };
-eval { $v .= pmver('Path::Tiny','any version') };
 eval { $v .= pmver('Pod::Eventual','any version') };
-eval { $v .= pmver('Test::Fatal','any version') };
 eval { $v .= pmver('Test::More','1.001002') };
-eval { $v .= pmver('Test::Requires','any version') };
 eval { $v .= pmver('Throwable::Error','any version') };
 eval { $v .= pmver('strict','any version') };
 eval { $v .= pmver('version','0.77') };
