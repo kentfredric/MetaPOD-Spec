@@ -23,17 +23,8 @@ my %module_build_args = (
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
-    "Carp" => 0,
-    "Data::Dump" => 0,
-    "List::AllUtils" => 0,
-    "Module::Runtime" => 0,
-    "Moo" => 0,
-    "Moo::Role" => 0,
-    "Pod::Eventual" => 0,
-    "Throwable::Error" => 0,
     "perl" => "5.006",
     "strict" => 0,
-    "version" => "0.77",
     "warnings" => 0
   },
   "script_files" => [],

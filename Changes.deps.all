@@ -5,6 +5,13 @@
  [Changed / runtime requires]
  - Moo 1.000008 → 0
 
+ [Removed / test requires]
+ - FindBin
+ - Path::Iterator::Rule
+ - Path::Tiny
+ - Test::Fatal
+ - Test::Requires
+
 0.3.0 2013-11-23T06:39:27Z
  [Added / develop requires]
  - Dist::Zilla::Plugin::Author::KENTNL::MinimumPerl
