@@ -2,8 +2,16 @@
  [Changed / develop requires]
  - Dist::Zilla::PluginBundle::Author::KENTNL 2.004000 → 2.004001
 
- [Changed / runtime requires]
- - Moo 1.000008 → 0
+ [Removed / runtime requires]
+ - Carp
+ - Data::Dump
+ - List::AllUtils
+ - Module::Runtime
+ - Moo 1.000008
+ - Moo::Role
+ - Pod::Eventual
+ - Throwable::Error
+ - version 0.77
 
  [Removed / test requires]
  - FindBin
