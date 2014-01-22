@@ -55,6 +55,116 @@ It is B<ENCOURAGED> that wherever possible to support the B<WIDEST> variety of v
 
 =cut
 
+=head1 SPEC VERSION v1.2.0
+
+This version of the spec is mostly identical to L</SPEC VERSION v1.1.0>, and it B<MUST> support all features
+of that version, with the following additions.
+
+=head2 C<subs>
+
+C<subs>, are a low-level critical component of any Perl Module. A C<sub> may manifest in various forms, some being exported,
+others being inherited or composed. Some C<subs> are C<methods>, other subs are C<functions>. Some C<subs> are dynamically generated
+from C<attribute> declarations, or are delegates for C<attribute> methods.
+
+The distinction between all these types will be improved upon in a future release of C<MetaPOD::Spec>
+
+So, with that said, any C<sub> declaration in this version of C<MetaPOD::JSON> simply indicates that a C<coderef> of some description
+is accessible to calling code at the name C<< B<namespace>::B<sub> >>.
+
+This include, but is not limited to, things like C<BUILD>, C<BUILDARGS> and C<import>.
+
+It is important to understand that this data is intended to articulate I<ONLY> C<subs> that are declared I<IN> and I<BY> the given C<namespace>.
+
+Thus, documenting C<subs> that are inherited, composed, or imported into the namespace is considered an I<ERROR>, as observing
+that data is intended to require observing the inheritance model.
+
+I<Method Modifiers> such as C<override>, C<around>, etc, for the purposes of this feature, should be considered the same as simply
+having redclared the C<sub> by the same name.
+
+=head3 C<subs> as a single token
+
+Supporting this version of the spec B<MUST> implement support for this notation:
+
+    { "subs" : "BUILD" }
+
+This should be interpreted the same as
+
+    { "subs" : [ "BUILD" ] }
+
+Which is the same as
+
+    { "subs" : [ { "name" : "BUILD" } ] }
+
+See also L<< Multiple Declaration|/Mulitple Declaration >>
+
+=head3 C<subs> as a single hash
+
+Supporting this version of the spec B<MUST> implement support for this notation:
+
+    { "subs" : { "name":"BUILD" } }
+
+This should be interpreted the same as
+
+    { "subs" : [ { "name" : "BUILD" } ] }
+
+See also L<< Multiple Declaration|/Mulitple Declaration >>
+
+=head3 C<subs> as a list of tokens
+
+Supporting this version of the spec B<MUST> implement support for this notation:
+
+    { "subs": [ "BUILD", "import", "add_foo" ] }
+
+This logic should be interpreted as a declaration of a list of ambiguously defined C<sub>s, and identical to
+
+    { "subs": [
+        { "name": "BUILD" },
+        { "name": "import" },
+        { "name": "add_foo" }
+    ] }
+
+As such, duplicate tokens B<SHOULD> be supported. ( This proviso is to add scope for muli-dispatch with a list of identically named methods
+with different signatures and behaviours )
+
+=head3 C<subs> as a list of C<HASH> entries.
+
+Supporting this version of the spec B<MUST> implement support for this notation:
+
+    { "subs": [ {entry}, {entry}, {entry} ] }
+
+Each entry should be interpreted as an individual C<sub> declaration, as specified by C<sub.entry>. Duplicates permitted.
+
+=head3 C<subs> as a list of mixed tokens and C<HASH> entries.
+
+Supporting this version of the spec B<MUST> implement support for this notation:
+
+    { "subs": [ "BUILD", { "name":"import" } ] }
+
+As with the I<list of tokens>, non C<HASH> entries should be inflated to C<HASH> entries by transforming
+as
+
+    "entry" => { "name": "entry" }
+
+=head3 Mulitple Declaration
+
+Implementations B<SHOULD> support multiple declarations for this field similar to how C<interface> works.
+
+So:
+
+    { "subs": "foo" }
+    { "subs": [ "foo" ] }
+
+Should be equivalent.
+
+    { "subs": "foo" } +  { "subs": "foo" }
+    { "subs": [ "foo", "foo" ] }
+
+And
+
+    { "subs": [ "foo"  ] } +  { "subs": [ "bar" ] }
+    { "subs": [ "foo", "bar" ] }
+
+
 =head1 SPEC VERSION v1.1.0
 
 This version of the spec is mostly identical to L</SPEC VERSION v1.0.0>, and it B<MUST> support all features
