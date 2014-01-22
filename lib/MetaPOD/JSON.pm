@@ -147,7 +147,7 @@ This logic should be interpreted as a declaration of a list of ambiguously defin
         { "name": "add_foo" }
     ] }
 
-As such, duplicate tokens B<SHOULD> be supported. ( This proviso is to add scope for multidispatch with a list of identically
+As such, duplicate tokens B<SHOULD> be supported. ( This proviso is to add scope for multiple dispatch with a list of identically
 named methods with different signatures and behaviours )
 
 =head3 C<subs> as a list of C<HASH> entries.
