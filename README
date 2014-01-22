@@ -2,7 +2,7 @@ NAME
     MetaPOD::Spec - The Specification of the MetaPOD format
 
 VERSION
-    version 0.3.5
+    version 0.4.0
 
 Specifying MetaPOD
   FORMATS
@@ -90,7 +90,7 @@ AUTHOR
     Kent Fredric <kentfredric@gmail.com>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2013 by Kent Fredric
+    This software is copyright (c) 2014 by Kent Fredric
     <kentfredric@gmail.com>.
 
     This is free software; you can redistribute it and/or modify it under

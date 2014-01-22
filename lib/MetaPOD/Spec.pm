@@ -1,15 +1,20 @@
+use 5.008;    # utf8
 use strict;
 use warnings;
+use utf8;
 
 package MetaPOD::Spec;
-BEGIN {
-  $MetaPOD::Spec::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $MetaPOD::Spec::VERSION = '0.3.5';
-}
-
+$MetaPOD::Spec::VERSION = '0.4.0';
 # ABSTRACT: The Specification of the MetaPOD format
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
+
+
+
+
+
+
 
 
 1;
@@ -26,7 +31,7 @@ MetaPOD::Spec - The Specification of the MetaPOD format
 
 =head1 VERSION
 
-version 0.3.5
+version 0.4.0
 
 =begin MetaPOD::JSON v1.1.0
 
@@ -55,8 +60,8 @@ e.g:
 
     =end MetaPOD::JSON
 
-These may, or may not, correspond to real world parser names, but the actual code loaded
-may be determined by the parser, and this declaration is more an indication of a I<specification>
+These may, or may not, correspond to real world parser names, but the actual code loaded may be determined by the parser, and
+this declaration is more an indication of a I<specification>
 
 And it may be that a C<MetaPOD::JSON> declaration loads MetaPOD::Format::JSON
 
@@ -68,9 +73,11 @@ A VERSION declaration B<must> start with a C<v>
 
 ALL VERSIONS will be assumed to be dotted-decimal, and parsed with the 'v' included.
 
-These versions however do not necessarily have to map to a C<CPAN> Version, and is instead supposed to be an indication of the I<specification> version, a specification that may be provided by multiple C<CPAN> packages/versions.
+These versions however do not necessarily have to map to a C<CPAN> Version, and is instead supposed to be an indication of the
+I<specification> version, a specification that may be provided by multiple C<CPAN> packages/versions.
 
-What this means to the I<specification> is at the whim of the format, and it is the formats job to respond to a version declaration.
+What this means to the I<specification> is at the whim of the format, and it is the formats job to respond to a version
+declaration.
 
 C<FORMATS> may either
 
@@ -114,9 +121,8 @@ and
 
 =head2 Multiple Segment Declaration
 
-It is the design of this Spec to recommend that segment declarations B<Should> be permissible
-to be declared multiple times, and it B<should> use this information to gather data progressively,
-merging data as it goes.
+It is the design of this Spec to recommend that segment declarations B<Should> be permissible to be declared multiple times, and
+it B<should> use this information to gather data progressively, merging data as it goes.
 
 =head1 AUTHOR
 
@@ -124,7 +130,7 @@ Kent Fredric <kentfredric@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
