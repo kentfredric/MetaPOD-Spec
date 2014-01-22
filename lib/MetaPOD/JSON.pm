@@ -1,10 +1,12 @@
 use strict;
 use warnings;
 
-# ABSTRACT: The C<JSON> Formatted MetaPOD Spec
-
 package MetaPOD::JSON;
 $MetaPOD::JSON::VERSION = '0.3.6';
+# ABSTRACT: The C<JSON> Formatted MetaPOD Spec
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 
 
 

@@ -5,6 +5,8 @@ package MetaPOD::Spec;
 $MetaPOD::Spec::VERSION = '0.3.6';
 # ABSTRACT: The Specification of the MetaPOD format
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 
 
 
