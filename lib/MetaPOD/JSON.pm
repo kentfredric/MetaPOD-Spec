@@ -5,7 +5,7 @@ use utf8;
 
 package MetaPOD::JSON;
 $MetaPOD::JSON::VERSION = '0.3.6';
-# ABSTRACT: The C<JSON> Formatted MetaPOD Spec
+# ABSTRACT: The JSON Formatted MetaPOD Spec
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
@@ -31,7 +31,7 @@ __END__
 
 =head1 NAME
 
-MetaPOD::JSON - The C<JSON> Formatted MetaPOD Spec
+MetaPOD::JSON - The JSON Formatted MetaPOD Spec
 
 =head1 VERSION
 
@@ -72,7 +72,9 @@ You can also declare a version for which semantics to imbue into the declaration
 
 as Per L<< C<::Spec>|MetaPOD::Spec >>, the "v" is required, and the version semantics are always dotted decimal.
 
-Note: As Per L<< C<::Spec>|MetaPOD::Spec >>, the version is B<NOT> a minimum version requirement, but a declaration of the versions semantics the containing declaration is encoded in. Given implementations B<MAY> support multiple versions, or they B<MAY NOT> support multiple versions.
+Note: As Per L<< C<::Spec>|MetaPOD::Spec >>, the version is B<NOT> a minimum version requirement, but a declaration of the
+versions semantics the containing declaration is encoded in. Given implementations B<MAY> support multiple versions, or they
+B<MAY NOT> support multiple versions.
 
 It is B<ENCOURAGED> that wherever possible to support the B<WIDEST> variety of versions.
 
@@ -84,23 +86,24 @@ of that version, with the following additions.
 =head2 C<subs>
 
 C<subs>, are a low-level critical component of any Perl Module. A C<sub> may manifest in various forms, some being exported,
-others being inherited or composed. Some C<subs> are C<methods>, other subs are C<functions>. Some C<subs> are dynamically generated
-from C<attribute> declarations, or are delegates for C<attribute> methods.
+others being inherited or composed. Some C<subs> are C<methods>, other subs are C<functions>. Some C<subs> are dynamically
+generated from C<attribute> declarations, or are delegates for C<attribute> methods.
 
 The distinction between all these types will be improved upon in a future release of C<MetaPOD::Spec>
 
-So, with that said, any C<sub> declaration in this version of C<MetaPOD::JSON> simply indicates that a C<coderef> of some description
-is accessible to calling code at the name C<< B<namespace>::B<sub> >>.
+So, with that said, any C<sub> declaration in this version of C<MetaPOD::JSON> simply indicates that a C<coderef> of some
+description is accessible to calling code at the name C<< B<namespace>::B<sub> >>.
 
 This include, but is not limited to, things like C<BUILD>, C<BUILDARGS> and C<import>.
 
-It is important to understand that this data is intended to articulate I<ONLY> C<subs> that are declared I<IN> and I<BY> the given C<namespace>.
+It is important to understand that this data is intended to articulate I<ONLY> C<subs> that are declared I<IN> and I<BY> the
+given C<namespace>.
 
 Thus, documenting C<subs> that are inherited, composed, or imported into the namespace is considered an I<ERROR>, as observing
 that data is intended to require observing the inheritance model.
 
-I<Method Modifiers> such as C<override>, C<around>, etc, for the purposes of this feature, should be considered the same as simply
-having redclared the C<sub> by the same name.
+I<Method Modifiers> such as C<override>, C<around>, etc, for the purposes of this feature, should be considered the same as
+simply having redclared the C<sub> by the same name.
 
 =head3 C<subs> as a single token
 
@@ -144,8 +147,8 @@ This logic should be interpreted as a declaration of a list of ambiguously defin
         { "name": "add_foo" }
     ] }
 
-As such, duplicate tokens B<SHOULD> be supported. ( This proviso is to add scope for muli-dispatch with a list of identically named methods
-with different signatures and behaviours )
+As such, duplicate tokens B<SHOULD> be supported. ( This proviso is to add scope for muli-dispatch with a list of identically
+named methods with different signatures and behaviours )
 
 =head3 C<subs> as a list of C<HASH> entries.
 
@@ -192,7 +195,8 @@ of that version, with the following additions.
 
 =head2 interface
 
-There are many ways for Perl Name spaces to behave, and this property indicates what style of interfaces a given name space supports.
+There are many ways for Perl Name spaces to behave, and this property indicates what style of interfaces a given name space
+supports.
 
 SPEC VERSION v1.1.0 Supports 6 interface types:
 
@@ -208,7 +212,8 @@ For instance, if your synopsis looks like this:
 
 Then you should include C<class> in your L</interface> list.
 
-=item * C<role> - Indicating the given C<namespace> is a "role" of some kind, and cannot be instantiated, only composed into other C<class>es.
+=item * C<role> - Indicating the given C<namespace> is a "role" of some kind, and cannot be instantiated, only composed into
+other C<class>es.
 
 For instance, if your synopsis looks like this:
 
@@ -239,7 +244,8 @@ For instance, if your synopsis looks like this:
 
 Then you should include C<functions> in your L</interface> list.
 
-=item * C<single_class> - A Hybrid between C<functions> and C<class>, a C<namespace> which has methods, but no constructor, and the C<namespace> itself behaves much like a singleton.
+=item * C<single_class> - A Hybrid between C<functions> and C<class>, a C<namespace> which has methods, but no constructor, and
+the C<namespace> itself behaves much like a singleton.
 
 For instance, if your synopsis looks like this:
 
@@ -263,7 +269,8 @@ Because here, C<writer> doesn't modify the state of C<Foo>, and C<writer> could 
 
 =item * C<type_library> - A Type Library of some kind.
 
-For instance, if your class uses C<Moose::Util::TypeConstraints> to create a named type of some kind, and that type is accessible via
+For instance, if your class uses C<Moose::Util::TypeConstraints> to create a named type of some kind, and that type is accessible
+via
 
     has Foo => (
         isa => 'TypeName'
@@ -271,7 +278,8 @@ For instance, if your class uses C<Moose::Util::TypeConstraints> to create a nam
 
 Then you want to include C<type_library> in your L</interface> list.
 
-Note: Some type libraries, notably L<< C<MooseX::Types>|MooseX::Types >> perform type creation in I<addition> to exporting, and for such libraries, you should include both C<type_library> and C<exporter>
+Note: Some type libraries, notably L<< C<MooseX::Types>|MooseX::Types >> perform type creation in I<addition> to exporting, and
+for such libraries, you should include both C<type_library> and C<exporter>
 
 =back
 
@@ -330,7 +338,8 @@ With the observation that latter keys may clobber preceding keys.
 Because of the Data Collection design, it is not supported to declare multiple name-spaces
 within the same file at present.
 
-This is mostly a practical consideration, as without this consideration, all declarations of class members would require re-stating the class, and that would quickly become tiresome.
+This is mostly a practical consideration, as without this consideration, all declarations of class members would require
+re-stating the class, and that would quickly become tiresome.
 
 =head2 KEYS
 
@@ -344,7 +353,8 @@ Example:
 
 =head3 C<inherits>
 
-Any C<MetaPOD::JSON> containing document that is known to inherit from another class, B<SHOULD> document their inheritance as such:
+Any C<MetaPOD::JSON> containing document that is known to inherit from another class, B<SHOULD> document their inheritance as
+such:
 
     { "inherits": [ "Moose::Object" ]}
 
