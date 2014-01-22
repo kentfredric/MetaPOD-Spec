@@ -1,5 +1,7 @@
+use 5.008;    # utf8
 use strict;
 use warnings;
+use utf8;
 
 package MetaPOD::JSON;
 $MetaPOD::JSON::VERSION = '0.3.6';
