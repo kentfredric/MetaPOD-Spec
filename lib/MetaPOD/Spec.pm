@@ -2,14 +2,15 @@ use strict;
 use warnings;
 
 package MetaPOD::Spec;
-BEGIN {
-  $MetaPOD::Spec::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $MetaPOD::Spec::VERSION = '0.3.5';
-}
-
+$MetaPOD::Spec::VERSION = '0.3.6';
 # ABSTRACT: The Specification of the MetaPOD format
+
+
+
+
+
+
+
 
 
 1;
@@ -26,7 +27,7 @@ MetaPOD::Spec - The Specification of the MetaPOD format
 
 =head1 VERSION
 
-version 0.3.5
+version 0.3.6
 
 =begin MetaPOD::JSON v1.1.0
 
@@ -124,7 +125,7 @@ Kent Fredric <kentfredric@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

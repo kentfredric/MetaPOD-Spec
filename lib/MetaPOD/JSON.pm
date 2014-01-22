@@ -4,12 +4,15 @@ use warnings;
 # ABSTRACT: The C<JSON> Formatted MetaPOD Spec
 
 package MetaPOD::JSON;
-BEGIN {
-  $MetaPOD::JSON::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $MetaPOD::JSON::VERSION = '0.3.5';
-}
+$MetaPOD::JSON::VERSION = '0.3.6';
+
+
+
+
+
+
+
+
 
 
 sub implementation_class { return 'MetaPod::Format::JSON' }
@@ -28,7 +31,7 @@ MetaPOD::JSON - The C<JSON> Formatted MetaPOD Spec
 
 =head1 VERSION
 
-version 0.3.5
+version 0.3.6
 
 =head1 SYNOPSIS
 
@@ -286,7 +289,7 @@ Kent Fredric <kentfredric@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
