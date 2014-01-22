@@ -312,7 +312,7 @@ Have the same effect, the result being the same as if you had specified
 
 =head2 Data collection
 
-Spec version 1.0.0 is such that multiple declarations should be merged to form an aggregate,
+Spec version 1.0.0 is such that multiple declarations should be merged to form an aggregate
 
 e.g.:
 
