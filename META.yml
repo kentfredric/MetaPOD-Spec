@@ -20,10 +20,10 @@ name: MetaPOD-Spec
 provides:
   MetaPOD::JSON:
     file: lib/MetaPOD/JSON.pm
-    version: v0.3.6
+    version: v0.4.0
   MetaPOD::Spec:
     file: lib/MetaPOD/Spec.pm
-    version: v0.3.6
+    version: v0.4.0
 requires:
   perl: 5.008
   strict: 0
@@ -33,7 +33,7 @@ resources:
   bugtracker: https://github.com/kentfredric/MetaPOD-Spec/issues
   homepage: https://github.com/kentfredric/MetaPOD-Spec
   repository: https://github.com/kentfredric/MetaPOD-Spec.git
-version: 0.3.6
+version: 0.4.0
 x_BuiltWith:
   modules:
     CPAN::Meta: 2.133380

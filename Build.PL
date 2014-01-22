@@ -18,7 +18,7 @@ my %module_build_args = (
     "Kent Fredric <kentfredric\@gmail.com>"
   ],
   "dist_name" => "MetaPOD-Spec",
-  "dist_version" => "0.3.6",
+  "dist_version" => "0.4.0",
   "license" => "perl",
   "module_name" => "MetaPOD::Spec",
   "recommends" => {},
