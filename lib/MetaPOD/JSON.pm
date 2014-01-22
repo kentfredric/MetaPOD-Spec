@@ -103,7 +103,7 @@ Thus, documenting C<subs> that are inherited, composed, or imported into the nam
 that data is intended to require observing the inheritance model.
 
 I<Method Modifiers> such as C<override>, C<around>, etc, for the purposes of this feature, should be considered the same as
-simply having redeclared the C<sub> by the same name.
+simply having re-declared the C<sub> by the same name.
 
 =head3 C<subs> as a single token
 
@@ -147,7 +147,7 @@ This logic should be interpreted as a declaration of a list of ambiguously defin
         { "name": "add_foo" }
     ] }
 
-As such, duplicate tokens B<SHOULD> be supported. ( This proviso is to add scope for multi-dispatch with a list of identically
+As such, duplicate tokens B<SHOULD> be supported. ( This proviso is to add scope for multidispatch with a list of identically
 named methods with different signatures and behaviours )
 
 =head3 C<subs> as a list of C<HASH> entries.
