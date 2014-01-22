@@ -1,6 +1,9 @@
 Release history for MetaPOD-Spec
 
 {{$NEXT}}
+ [00 Major]
+ - Introduce Spec version v1.2.0 with `subs`
+
 
 0.3.5 2013-11-24T10:49:49Z
  [00 Fork]
