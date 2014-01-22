@@ -70,6 +70,7 @@ my @modules = qw(
   Test::Pod::Coverage
   perl
   strict
+  utf8
   warnings
 );
 

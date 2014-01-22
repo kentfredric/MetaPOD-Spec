@@ -81,8 +81,9 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.006",
+            "perl" : "5.010",
             "strict" : "0",
+            "utf8" : "0",
             "warnings" : "0"
          }
       },
@@ -181,6 +182,7 @@
          "Test::Pod" : "1.48",
          "Test::Pod::Coverage" : "1.08",
          "strict" : "1.08",
+         "utf8" : "1.13",
          "warnings" : "1.20"
       },
       "perl" : {

@@ -160,7 +160,7 @@ Supporting this version of the spec B<MUST> implement support for this notation:
     { "subs": [ "BUILD", { "name":"import" } ] }
 
 As with the I<list of tokens>, non C<HASH> entries should be inflated to C<HASH> entries by transforming
-as 
+as
 
     "entry" => { "name": "entry" }
 

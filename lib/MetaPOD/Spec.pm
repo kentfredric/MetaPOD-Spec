@@ -1,5 +1,7 @@
+use 5.010; # utf8
 use strict;
 use warnings;
+use utf8;
 
 package MetaPOD::Spec;
 $MetaPOD::Spec::VERSION = '0.3.6';
