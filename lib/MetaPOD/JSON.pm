@@ -1,9 +1,11 @@
 use strict;
 use warnings;
 
+package MetaPOD::JSON;
+
 # ABSTRACT: The C<JSON> Formatted MetaPOD Spec
 
-package MetaPOD::JSON;
+# AUTHORITY
 
 =begin MetaPOD::JSON v1.1.0
 

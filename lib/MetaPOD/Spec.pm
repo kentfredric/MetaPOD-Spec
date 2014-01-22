@@ -5,6 +5,8 @@ package MetaPOD::Spec;
 
 # ABSTRACT: The Specification of the MetaPOD format
 
+# AUTHORITY
+
 =begin MetaPOD::JSON v1.1.0
 
 { "namespace":"MetaPOD::Spec" }
