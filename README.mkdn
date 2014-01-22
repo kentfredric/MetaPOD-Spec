@@ -30,8 +30,8 @@ e.g:
 
     =end MetaPOD::JSON
 
-These may, or may not, correspond to real world parser names, but the actual code loaded
-may be determined by the parser, and this declaration is more an indication of a _specification_
+These may, or may not, correspond to real world parser names, but the actual code loaded may be determined by the parser, and
+this declaration is more an indication of a _specification_
 
 And it may be that a `MetaPOD::JSON` declaration loads MetaPOD::Format::JSON
 
@@ -43,9 +43,11 @@ A VERSION declaration __must__ start with a `v`
 
 ALL VERSIONS will be assumed to be dotted-decimal, and parsed with the 'v' included.
 
-These versions however do not necessarily have to map to a `CPAN` Version, and is instead supposed to be an indication of the _specification_ version, a specification that may be provided by multiple `CPAN` packages/versions.
+These versions however do not necessarily have to map to a `CPAN` Version, and is instead supposed to be an indication of the
+_specification_ version, a specification that may be provided by multiple `CPAN` packages/versions.
 
-What this means to the _specification_ is at the whim of the format, and it is the formats job to respond to a version declaration.
+What this means to the _specification_ is at the whim of the format, and it is the formats job to respond to a version
+declaration.
 
 `FORMATS` may either
 
@@ -83,9 +85,8 @@ and
 
 ## Multiple Segment Declaration
 
-It is the design of this Spec to recommend that segment declarations __Should__ be permissible
-to be declared multiple times, and it __should__ use this information to gather data progressively,
-merging data as it goes.
+It is the design of this Spec to recommend that segment declarations __Should__ be permissible to be declared multiple times, and
+it __should__ use this information to gather data progressively, merging data as it goes.
 
 # AUTHOR
 
