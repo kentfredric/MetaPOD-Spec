@@ -1,4 +1,6 @@
-0.4.0
+0.4.1
+
+0.4.0 2014-01-22T05:52:17Z
  [Added / develop requires]
  - Dist::Zilla::Plugin::Git::NextRelease
  - Dist::Zilla::Plugin::Git::NextVersion::Sanitized
