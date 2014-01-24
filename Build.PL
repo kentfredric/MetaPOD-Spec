@@ -18,7 +18,7 @@ my %module_build_args = (
     "Kent Fredric <kentfredric\@gmail.com>"
   ],
   "dist_name" => "MetaPOD-Spec",
-  "dist_version" => "0.4.0",
+  "dist_version" => "0.4.1",
   "license" => "perl",
   "module_name" => "MetaPOD::Spec",
   "recommends" => {},
@@ -34,7 +34,8 @@ my %module_build_args = (
     "ExtUtils::MakeMaker" => 0,
     "File::Spec::Functions" => 0,
     "List::Util" => 0,
-    "Test::More" => "1.001002"
+    "Test::More" => "1.001002",
+    "version" => 0
   }
 );
 
@@ -44,7 +45,8 @@ my %fallback_build_requires = (
   "File::Spec::Functions" => 0,
   "List::Util" => 0,
   "Module::Build" => "0.4204",
-  "Test::More" => "1.001002"
+  "Test::More" => "1.001002",
+  "version" => 0
 );
 
 

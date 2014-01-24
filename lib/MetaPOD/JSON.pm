@@ -4,7 +4,7 @@ use warnings;
 use utf8;
 
 package MetaPOD::JSON;
-$MetaPOD::JSON::VERSION = '0.4.0';
+$MetaPOD::JSON::VERSION = '0.4.1';
 # ABSTRACT: The JSON Formatted MetaPOD Spec
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -35,7 +35,7 @@ MetaPOD::JSON - The JSON Formatted MetaPOD Spec
 
 =head1 VERSION
 
-version 0.4.0
+version 0.4.1
 
 =head1 SYNOPSIS
 
@@ -77,6 +77,53 @@ versions semantics the containing declaration is encoded in. Given implementatio
 B<MAY NOT> support multiple versions.
 
 It is B<ENCOURAGED> that wherever possible to support the B<WIDEST> variety of versions.
+
+=head1 SPEC VERSION v1.2.1
+
+This version of the spec is mostly identical to L</SPEC VERSION v1.2.0>, and it is bi-directionally compatible with it.
+
+However, v1.2.0 made the omission of the definition of C<sub.entry>, and this spec revision simply corrects that defect.
+
+=head2 C<sub.entry>
+
+In C<v1.2.1>, a C<sub.entry> is a simple C<HASH>, with only 1 supported key.
+
+=head3 C<name>
+
+    { "name":"SomeName" }
+
+This field should describe the name of the C<sub> symbol it pertains to.
+
+At the time of this spec, there is no way to declare multiple facets of a single C<sub> description in separate declarations.
+
+The following C<POD> code
+
+    =begin MetaPOD::JSON v1.2.1
+
+    { "subs": [ { "name":"Foo" } ] }
+
+    =end MetaPOD::JSON
+
+    =begin MetaPOD::JSON v1.2.1
+
+    { "subs": [ { "name":"Foo" } ] }
+
+    =end MetaPOD::JSON
+
+is equivalent to
+
+    =begin MetaPOD::JSON v1.2.1
+
+    { "subs": [ { "name":"Foo" }, { "name":"Foo" } ] }
+
+    =end MetaPOD::JSON
+
+Which simply communicates that although it is only possible for there to be one physical Perl C<sub> C<Foo>, some internal
+dispatch magic differences means they're effectively two separate C<sub>'s from the context of calling code.
+
+( For instance, when signature support is added, they may have different signatures and different signatures have different
+behaviours, and its clearer to simply document each kind of behaviour as a separate method than to try codify the complex logic
+of how the internal signature conditions work )
 
 =head1 SPEC VERSION v1.2.0
 
@@ -187,6 +234,15 @@ And
 
     { "subs": [ "foo"  ] } +  { "subs": [ "bar" ] }
     { "subs": [ "foo", "bar" ] }
+
+=head2 C<sub.entry>
+
+This field was not formally designed in the release of C<v1.2.0> spec, and although the definition of the field seems obvious
+enough when looking at the C<sub> specification, it is not formally described.
+
+This should be resolved in the v1.2.1 spec.
+
+Though consuming C<MetaPOD> documentation should be usable with either.
 
 =head1 SPEC VERSION v1.1.0
 
