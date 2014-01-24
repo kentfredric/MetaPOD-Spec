@@ -1,6 +1,9 @@
 Release history for MetaPOD-Spec
 
 {{$NEXT}}
+ [00 Minor]
+ - Fix minor bug in specification which left sub.entry undefined.
+
 
 0.4.0 2014-01-22T05:52:17Z
  [00 Major]
