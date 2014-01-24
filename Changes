@@ -4,6 +4,10 @@ Release history for MetaPOD-Spec
  [00 Minor]
  - Fix minor bug in specification which left sub.entry undefined.
 
+ [Dependencies::Stats]
+ - Dependencies changed since 0.4.0, see Changes.deps{,.all,.dev} for
+   details
+ - test: +1 ↑1
 
 0.4.0 2014-01-22T05:52:17Z
  [00 Major]

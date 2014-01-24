@@ -4,7 +4,7 @@ MetaPOD::Spec - The Specification of the MetaPOD format
 
 # VERSION
 
-version 0.4.0
+version 0.4.1
 
 { "namespace":"MetaPOD::Spec" }
 
