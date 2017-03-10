@@ -4,11 +4,7 @@ MetaPOD::Spec - The Specification of the MetaPOD format
 
 # VERSION
 
-version 0.4.1
-
-{ "namespace":"MetaPOD::Spec" }
-
-
+version 0.4.2
 
 # Specifying MetaPOD
 
@@ -37,9 +33,9 @@ And it may be that a `MetaPOD::JSON` declaration loads MetaPOD::Format::JSON
 
 ## VERSIONS
 
-A VERSION as part of a Segment declaration __must__ come after the format declaration, preceded only by white-space.
+A VERSION as part of a Segment declaration **must** come after the format declaration, preceded only by white-space.
 
-A VERSION declaration __must__ start with a `v`
+A VERSION declaration **must** start with a `v`
 
 ALL VERSIONS will be assumed to be dotted-decimal, and parsed with the 'v' included.
 
@@ -85,8 +81,8 @@ and
 
 ## Multiple Segment Declaration
 
-It is the design of this Spec to recommend that segment declarations __Should__ be permissible to be declared multiple times, and
-it __should__ use this information to gather data progressively, merging data as it goes.
+It is the design of this Spec to recommend that segment declarations **Should** be permissible to be declared multiple times, and
+it **should** use this information to gather data progressively, merging data as it goes.
 
 # AUTHOR
 
@@ -94,7 +90,7 @@ Kent Fredric <kentfredric@gmail.com>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2017 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
