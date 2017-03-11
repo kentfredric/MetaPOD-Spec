@@ -4,7 +4,7 @@ use warnings;
 
 package MetaPOD::Spec;
 
-our $VERSION = 'v0.5.0';
+our $VERSION = 'v0.5.1';
 
 # ABSTRACT: The Specification of the MetaPOD format
 
