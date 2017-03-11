@@ -1,98 +1,28 @@
-NAME
-    MetaPOD::Spec - The Specification of the MetaPOD format
+MetaPOD::Spec
 
-VERSION
-    version 0.4.1
 
-Specifying MetaPOD
-  FORMATS
-    A FORMAT is a MetaPOD Subclass.
 
-    Segments will be parsed looking for
+INSTALLATION
 
-        MetaPOD::([^\s]+)
+This is a Perl module distribution. It should be installed with whichever
+tool you use to manage your installation of Perl, e.g. any of
 
-    Where $1 is the name of the MetaPOD "FORMAT"
+  cpanm .
+  cpan  .
+  cpanp -i .
 
-    e.g:
+Consult http://www.cpan.org/modules/INSTALL.html for further instruction.
+Should you wish to install this module manually, the procedure is
 
-        =begin MetaPOD::JSON
-
-        { JSON DATA }
-
-        =end MetaPOD::JSON
-
-    These may, or may not, correspond to real world parser names, but the
-    actual code loaded may be determined by the parser, and this declaration
-    is more an indication of a *specification*
-
-    And it may be that a "MetaPOD::JSON" declaration loads
-    MetaPOD::Format::JSON
-
-  VERSIONS
-    A VERSION as part of a Segment declaration must come after the format
-    declaration, preceded only by white-space.
-
-    A VERSION declaration must start with a "v"
-
-    ALL VERSIONS will be assumed to be dotted-decimal, and parsed with the
-    'v' included.
-
-    These versions however do not necessarily have to map to a "CPAN"
-    Version, and is instead supposed to be an indication of the
-    *specification* version, a specification that may be provided by
-    multiple "CPAN" packages/versions.
-
-    What this means to the *specification* is at the whim of the format, and
-    it is the formats job to respond to a version declaration.
-
-    "FORMATS" may either
-
-    *   reject a version as being "too new" and thus not supported by a back
-        end
-
-    *   change behaviour based on the value of this version
-
-    *   reject a version as being "too old" to be supported by the back end
-
-  Segment Declaration
-    A MetaPOD specification can be added to a POD document via one of the
-    following forms
-
-   Block Segments
-        =begin MetaPOD::FORMAT
-
-        FORMATDATA
-
-        =end MetaPOD::FORMAT
-
-    And
-
-        =begin MetaPOD::FORMAT VERSION
-
-        FORMATDATA
-
-        =end MetaPOD::FORMAT
-
-   One Line Segments
-        =for MetaPOD::FORMAT FORMATDATA
-
-    and
-
-        =for MetaPOD::FORMAT VERSION FORMATDATA
-
-  Multiple Segment Declaration
-    It is the design of this Spec to recommend that segment declarations
-    Should be permissible to be declared multiple times, and it should use
-    this information to gather data progressively, merging data as it goes.
-
-AUTHOR
-    Kent Fredric <kentfredric@gmail.com>
+  perl Makefile.PL
+  make
+  make test
+  make install
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2014 by Kent Fredric
-    <kentfredric@gmail.com>.
 
-    This is free software; you can redistribute it and/or modify it under
-    the same terms as the Perl 5 programming language system itself.
+This software is copyright (c) 2017 by Kent Fredric
+<kentfredric@gmail.com>.
 
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
