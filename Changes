@@ -1,6 +1,6 @@
 Release history for MetaPOD-Spec
 
-v0.5.0 2017-03-11T11:09:17Z 2804f4e
+v0.5.0 2017-03-11T11:29:21Z f272a6a
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
  - Tooling overhaul: Now uses ExtUtils::MakeMaker. May affect some downstreams.
 
@@ -9,6 +9,7 @@ v0.5.0 2017-03-11T11:09:17Z 2804f4e
  - build: -1
  - configure: +2 -1 (recommends: +1)
  - develop: +20 ↑4 -8 (recommends: +1, suggests: +2 -1)
+ - runtime: ↓1 -1
  - test: +2 ↓1 -3 (recommends: +2 ↑1 -1)
 
 0.4.1 2014-01-24T12:53:26Z
