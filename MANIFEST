@@ -19,11 +19,13 @@ layout/self_structure.dot
 layout/self_structure.png
 lib/MetaPOD/JSON.pm
 lib/MetaPOD/Spec.pm
+maint/perlcritic.rc.gen.pl
 misc/Changes.deps
 misc/Changes.deps.all
 misc/Changes.deps.dev
 misc/Changes.deps.opt
 misc/built_with.json
+misc/perlcritic.deps
 perlcritic.rc
 t/00-compile/lib_MetaPOD_JSON_pm.t
 t/00-compile/lib_MetaPOD_Spec_pm.t
