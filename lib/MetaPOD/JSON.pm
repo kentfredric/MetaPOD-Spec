@@ -5,7 +5,7 @@ use utf8;
 
 package MetaPOD::JSON;
 
-our $VERSION = 'v0.4.2';
+our $VERSION = 'v0.5.0';
 
 # ABSTRACT: The JSON Formatted MetaPOD Spec
 
@@ -37,7 +37,7 @@ MetaPOD::JSON - The JSON Formatted MetaPOD Spec
 
 =head1 VERSION
 
-version v0.4.2
+version v0.5.0
 
 =head1 SYNOPSIS
 

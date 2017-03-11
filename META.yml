@@ -5,11 +5,10 @@ author:
 build_requires:
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
-  Module::Build: '0.4220'
-  Test::More: '1.302073'
+  Test::More: '0'
   perl: '5.008'
 configure_requires:
-  Module::Build: '0.4220'
+  ExtUtils::MakeMaker: '0'
   perl: '5.008'
 dynamic_config: 0
 generated_by: 'Dist::Zilla version 6.009, CPAN::Meta::Converter version 2.150010'
@@ -21,10 +20,10 @@ name: MetaPOD-Spec
 provides:
   MetaPOD::JSON:
     file: lib/MetaPOD/JSON.pm
-    version: v0.4.2
+    version: v0.5.0
   MetaPOD::Spec:
     file: lib/MetaPOD/Spec.pm
-    version: v0.4.2
+    version: v0.5.0
 requires:
   perl: '5.008'
   strict: '0'
@@ -34,4 +33,4 @@ resources:
   bugtracker: https://github.com/kentnl/MetaPOD-Spec/issues
   homepage: https://github.com/kentnl/MetaPOD-Spec
   repository: https://github.com/kentnl/MetaPOD-Spec.git
-version: v0.4.2
+version: v0.5.0
