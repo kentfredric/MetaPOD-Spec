@@ -4,7 +4,7 @@ use warnings;
 
 package MetaPOD::Spec;
 
-our $VERSION = 'v0.5.0';
+our $VERSION = 'v0.5.1';
 
 # ABSTRACT: The Specification of the MetaPOD format
 
@@ -32,7 +32,7 @@ MetaPOD::Spec - The Specification of the MetaPOD format
 
 =head1 VERSION
 
-version v0.5.0
+version v0.5.1
 
 =begin MetaPOD::JSON v1.1.0
 
