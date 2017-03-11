@@ -4,7 +4,9 @@ use warnings;
 use utf8;
 
 package MetaPOD::JSON;
-$MetaPOD::JSON::VERSION = '0.4.2';
+
+our $VERSION = 'v0.4.2';
+
 # ABSTRACT: The JSON Formatted MetaPOD Spec
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -35,7 +37,7 @@ MetaPOD::JSON - The JSON Formatted MetaPOD Spec
 
 =head1 VERSION
 
-version 0.4.2
+version v0.4.2
 
 =head1 SYNOPSIS
 

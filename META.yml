@@ -34,4 +34,4 @@ resources:
   bugtracker: https://github.com/kentnl/MetaPOD-Spec/issues
   homepage: https://github.com/kentnl/MetaPOD-Spec
   repository: https://github.com/kentnl/MetaPOD-Spec.git
-version: 0.4.2
+version: v0.4.2
