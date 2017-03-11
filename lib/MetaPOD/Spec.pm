@@ -128,7 +128,7 @@ it B<should> use this information to gather data progressively, merging data as 
 
 =head1 AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
