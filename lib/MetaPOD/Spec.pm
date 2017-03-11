@@ -5,7 +5,7 @@ use utf8;
 
 package MetaPOD::Spec;
 
-our $VERSION = 'v0.4.2';
+our $VERSION = 'v0.5.0';
 
 # ABSTRACT: The Specification of the MetaPOD format
 
