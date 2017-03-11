@@ -5,6 +5,8 @@ use utf8;
 
 package MetaPOD::Spec;
 
+our $VERSION = 'v0.4.2';
+
 # ABSTRACT: The Specification of the MetaPOD format
 
 # AUTHORITY
