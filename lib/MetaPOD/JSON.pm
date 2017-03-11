@@ -4,7 +4,7 @@ use warnings;
 use utf8;
 
 package MetaPOD::JSON;
-$MetaPOD::JSON::VERSION = '0.4.1';
+$MetaPOD::JSON::VERSION = '0.4.2';
 # ABSTRACT: The JSON Formatted MetaPOD Spec
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -35,7 +35,7 @@ MetaPOD::JSON - The JSON Formatted MetaPOD Spec
 
 =head1 VERSION
 
-version 0.4.1
+version 0.4.2
 
 =head1 SYNOPSIS
 
@@ -468,7 +468,7 @@ Kent Fredric <kentfredric@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2017 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
